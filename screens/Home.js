@@ -12,6 +12,10 @@ const Home = () => {
       navigation.navigate('Sendxrp');
     };
 
+    const onOperationalAccountPress = () => {
+      navigation.navigate('OperationalAccount');
+    };
+
   return (
     <View style={styles.container} behavior="padding">
         <Text style={styles.HelloText}>Enter your Location</Text>
@@ -27,7 +31,11 @@ const Home = () => {
       <Text style={styles.subText}>Enter any Location to check weather Forecast</Text>
 
       <TouchableOpacity onPress={onSendxrpPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Get Started</Text>
+        <Text style={styles.ButtonText}>Standby Account</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={onOperationalAccountPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>Operational Account</Text>
       </TouchableOpacity>
     
     </View>
@@ -126,7 +134,9 @@ const styles = StyleSheet.create({
       backgroundColor: "#5659C6",
       borderRadius: 5,
       paddingVertical: 20,
-      paddingHorizontal: 140
+      paddingHorizontal: 140,
+      marginBottom:10,
+      
   },
 
 

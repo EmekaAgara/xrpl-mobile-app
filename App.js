@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Welcome from './screens/Welcome';
 import Home from './screens/Home';
 import Sendxrp from './screens/Sendxrp';
+import OperationalAccount from './screens/OperationalAccount';
 
 
 export default function App() {
@@ -41,14 +42,28 @@ export default function App() {
             component={Sendxrp}
             options={{
             headerShown:true,
-            title: 'Send XRP',
+            title: 'Standby Account',
             headerStyle: {
               backgroundColor: 'black'
             },
             headerTintColor: 'white',
-            
             }}
           />
+
+          <Stack.Screen
+            name='OperationalAccount'
+            component={OperationalAccount}
+            options={{
+            headerShown:true,
+            title: 'Operational Account',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+
         </Stack.Navigator>
       </SafeAreaProvider>
     </NavigationContainer>
