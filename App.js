@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'
 import Welcome from './screens/Welcome';
 import Home from './screens/Home';
+import sendxrp from './screens/sendxrp';
 
 
 export default function App() {
@@ -29,6 +30,14 @@ export default function App() {
           <Stack.Screen
             name='Home'
             component={Home}
+            options={{
+            headerShown:false,
+            }}
+          />
+
+          <Stack.Screen
+            name='sendxrp'
+            component={sendxrp}
             options={{
             headerShown:false,
             }}

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView } from 'react-native'
+import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import SearchInput from '../components/SearchInput';
@@ -6,9 +6,10 @@ import getImageForWeather from '../utils/getImageForWeather';
 
 const Home = () => {
     const location = 'Lagos';
+
     const navigation = useNavigation();
-    const onGetStartedPress = () => {
-      navigation.navigate('Home');
+    const onSendxrpPress = () => {
+      navigation.navigate('sendxrp');
     };
 
   return (
@@ -24,6 +25,10 @@ const Home = () => {
       <Text style={styles.sText}>Its Rainy</Text>
       <Text style={styles.wText}>  38°</Text>
       <Text style={styles.subText}>Enter any Location to check weather Forecast</Text>
+
+      <TouchableOpacity onPress={onSendxrpPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>Get Started</Text>
+      </TouchableOpacity>
     
     </View>
   )
@@ -116,5 +121,21 @@ const styles = StyleSheet.create({
         borderRadius:7,
         color:'#818589'
     },
+
+    ButtonContainer: {
+      backgroundColor: "#5659C6",
+      borderRadius: 5,
+      paddingVertical: 20,
+      paddingHorizontal: 140
+  },
+
+
+  ButtonText: {
+      fontSize: 15,
+      color: "#fff",
+      fontWeight: 500,
+      alignSelf: "center",
+  },
+
   });
   
