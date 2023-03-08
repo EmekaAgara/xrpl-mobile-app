@@ -14,6 +14,7 @@ import Sendxrp from './screens/Sendxrp';
 export default function App() {
   const Stack = createStackNavigator();
   return (
+    
     <NavigationContainer>
       <SafeAreaProvider>
         <Stack.Navigator>
@@ -39,7 +40,13 @@ export default function App() {
             name='Sendxrp'
             component={Sendxrp}
             options={{
-            headerShown:false,
+            headerShown:true,
+            title: 'Send XRP',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            
             }}
           />
         </Stack.Navigator>
