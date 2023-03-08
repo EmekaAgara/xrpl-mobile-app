@@ -9,7 +9,7 @@ const Home = () => {
 
     const navigation = useNavigation();
     const onSendxrpPress = () => {
-      navigation.navigate('sendxrp');
+      navigation.navigate('Sendxrp');
     };
 
   return (
