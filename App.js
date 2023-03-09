@@ -10,6 +10,8 @@ import Welcome from './screens/Welcome';
 import Home from './screens/Home';
 import Sendxrp from './screens/Sendxrp';
 import OperationalAccount from './screens/OperationalAccount';
+import CreateTrustlineSw from './screens/CreateTrustlineSw';
+import CreateTrustlineOp from './screens/CreateTrustlineOp';
 
 
 export default function App() {
@@ -56,6 +58,32 @@ export default function App() {
             options={{
             headerShown:true,
             title: 'Operational Account',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
+            name='CreateTrustlineSw'
+            component={CreateTrustlineSw}
+            options={{
+            headerShown:true,
+            title: 'Create Trustline Sw',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
+            name='CreateTrustlineOp'
+            component={CreateTrustlineOp}
+            options={{
+            headerShown:true,
+            title: 'Create Trustline Op',
             headerStyle: {
               backgroundColor: 'black'
             },

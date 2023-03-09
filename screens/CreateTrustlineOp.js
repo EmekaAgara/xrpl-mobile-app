@@ -5,7 +5,7 @@ import { SafeAreaView } from "react-native";
 import { WebView } from 'react-native-webview';
 
 
-export default class OperationalAccount extends PureComponent {
+export default class CreateTrustlineOp extends PureComponent {
   render() {
     
     return (
@@ -14,7 +14,7 @@ export default class OperationalAccount extends PureComponent {
         <WebView 
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          source={{ uri: 'https://xrpl-project.netlify.app/operational-account' }}
+          source={{ uri: 'https://xrpl-project.netlify.app/create-trustline-send-currency-ow' }}
           javaScriptEnabled={true}
           domStorageEnabled={true}
         />

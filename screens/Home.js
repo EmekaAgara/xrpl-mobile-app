@@ -16,6 +16,14 @@ const Home = () => {
       navigation.navigate('OperationalAccount');
     };
 
+    const onCreateTlSwPress = () => {
+      navigation.navigate('CreateTrustlineSw');
+    };
+
+    const onCreateTlOwPress = () => {
+      navigation.navigate('CreateTrustlineOp');
+    };
+
   return (
     <View style={styles.container} behavior="padding">
         <Text style={styles.HelloText}>Enter your Location</Text>
@@ -37,6 +45,18 @@ const Home = () => {
       <TouchableOpacity onPress={onOperationalAccountPress} style={styles.ButtonContainer}>
         <Text style={styles.ButtonText}>Operational Account</Text>
       </TouchableOpacity>
+
+
+      <TouchableOpacity onPress={onCreateTlSwPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>Create Trustline Standby Account</Text>
+      </TouchableOpacity>
+
+
+      <TouchableOpacity onPress={onCreateTlOwPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>Create Trustline Operational Account</Text>
+      </TouchableOpacity>
+
+      
     
     </View>
   )
