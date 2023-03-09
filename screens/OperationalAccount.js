@@ -15,7 +15,7 @@ export default class OperationalAccount extends PureComponent {
         <WebView 
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          source={{ uri: 'https://xrpl-project.netlify.app/' }} 
+          source={{ uri: 'https://xrpl-project.netlify.app/operational-account' }} 
         />
       </SafeAreaView>
     );
