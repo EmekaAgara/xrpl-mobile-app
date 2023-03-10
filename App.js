@@ -24,6 +24,11 @@ import OwMintNft from './screens/OwMintNft';
 import NftsOw from './screens/NftsOw';
 import TransferNftSw from './screens/TransferNftSw';
 import TransferNftOw from './screens/TransferNftOw';
+import SplashScreen from './screens/SplashScreen';
+import SplashScreen1 from './screens/SplashScreen1';
+import SplashScreen2 from './screens/SplashScreen2';
+import SplashScreen3 from './screens/SplashScreen3';
+import SplashScreen4 from './screens/SplashScreen4';
 
 
 export default function App() {
@@ -33,6 +38,46 @@ export default function App() {
     <NavigationContainer>
       <SafeAreaProvider>
         <Stack.Navigator>
+
+        <Stack.Screen
+            name='SplashScreen'
+            component={SplashScreen}
+            options={{
+            headerShown:false,
+            }}
+          />
+
+          <Stack.Screen
+            name='SplashScreen1'
+            component={SplashScreen1}
+            options={{
+            headerShown:false,
+            }}
+          />
+
+          <Stack.Screen
+            name='SplashScreen2'
+            component={SplashScreen2}
+            options={{
+            headerShown:false,
+            }}
+          />
+
+          <Stack.Screen
+            name='SplashScreen3'
+            component={SplashScreen3}
+            options={{
+            headerShown:false,
+            }}
+          />
+
+          <Stack.Screen
+            name='SplashScreen4'
+            component={SplashScreen4}
+            options={{
+            headerShown:false,
+            }}
+          />
 
 
           <Stack.Screen
