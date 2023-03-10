@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import SearchInput from '../components/SearchInput';
 import getImageForWeather from '../utils/getImageForWeather';
 
-const Home = () => {
+const HomeOperationalWallet = () => {
     const location = 'Lagos';
 
     const navigation = useNavigation();
@@ -81,7 +81,7 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeOperationalWallet
 
 const styles = StyleSheet.create({
     container: {
