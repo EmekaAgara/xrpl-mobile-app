@@ -5,7 +5,6 @@ import SearchInput from '../components/SearchInput';
 import getImageForWeather from '../utils/getImageForWeather';
 
 const HomeStandbyWallet = () => {
-    const location = 'Lagos';
 
     const navigation = useNavigation();
 
@@ -13,66 +12,39 @@ const HomeStandbyWallet = () => {
       navigation.navigate('NewSbWallet');
     };
 
-    const onNewOpWalletPress = () => {
-      navigation.navigate('NewOpWallet');
-    };
-
     const onSendxrpPress = () => {
       navigation.navigate('Sendxrp');
-    };
-
-    const onOperationalAccountPress = () => {
-      navigation.navigate('OperationalAccount');
     };
 
     const onCreateTlSwPress = () => {
       navigation.navigate('CreateTrustlineSw');
     };
 
-    const onCreateTlOwPress = () => {
-      navigation.navigate('CreateTrustlineOp');
+    const onNftsPress = () => {
+      navigation.navigate('Nfts');
     };
 
   return (
     <View style={styles.container} behavior="padding">
-        <Text style={styles.HelloText}>Enter your Location</Text>
-        <SearchInput/>
-        {/* <Image style={styles.weatherImg}
-            source={getImageForWeather('Heavy Cloud')}
-        /> */}
-
-      {/* <Text style={styles.mainText}>In {location}</Text>
-      <Text style={styles.dText}>Today, 7th March 2023</Text>
-      <Text style={styles.sText}>Its Rainy</Text>
-      <Text style={styles.wText}>  38°</Text>
-      <Text style={styles.subText}>Enter any Location to check weather Forecast</Text> */}
+        <Text style={styles.HelloText}>standby Account home</Text>
 
 
       <TouchableOpacity onPress={onNewSbWalletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}> Get new Standby Account</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={onNewOpWalletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}> Get new Operational Account</Text>
+        <Text style={styles.ButtonText}> Get new Wallet Account</Text>
       </TouchableOpacity>
 
 
       <TouchableOpacity onPress={onSendxrpPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Standby Account send xrp</Text>
+        <Text style={styles.ButtonText}>Send xrp</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity onPress={onOperationalAccountPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Operational Account send xrp</Text>
-      </TouchableOpacity>
-
 
       <TouchableOpacity onPress={onCreateTlSwPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Create Trustline Standby Account</Text>
+        <Text style={styles.ButtonText}>Create Trustline</Text>
       </TouchableOpacity>
 
 
-      <TouchableOpacity onPress={onCreateTlOwPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Create Trustline Operational Account</Text>
+      <TouchableOpacity onPress={onNftsPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>Explore NFTS</Text>
       </TouchableOpacity>
 
       

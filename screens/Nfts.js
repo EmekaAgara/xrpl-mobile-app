@@ -9,74 +9,29 @@ const Nfts = () => {
 
     const navigation = useNavigation();
 
-    const onNewSbWalletPress = () => {
-      navigation.navigate('NewSbWallet');
+    const onSWMintNftPress = () => {
+      navigation.navigate('SWMintNft');
     };
 
-    const onNewOpWalletPress = () => {
-      navigation.navigate('NewOpWallet');
-    };
-
-    const onSendxrpPress = () => {
-      navigation.navigate('Sendxrp');
-    };
-
-    const onOperationalAccountPress = () => {
-      navigation.navigate('OperationalAccount');
-    };
-
-    const onCreateTlSwPress = () => {
-      navigation.navigate('CreateTrustlineSw');
-    };
-
-    const onCreateTlOwPress = () => {
-      navigation.navigate('CreateTrustlineOp');
+    const onTransferNftPress = () => {
+      navigation.navigate('TransferNftSw');
     };
 
   return (
     <View style={styles.container} behavior="padding">
-        <Text style={styles.HelloText}>Enter your Location</Text>
-        <SearchInput/>
-        {/* <Image style={styles.weatherImg}
-            source={getImageForWeather('Heavy Cloud')}
-        /> */}
-
-      {/* <Text style={styles.mainText}>In {location}</Text>
-      <Text style={styles.dText}>Today, 7th March 2023</Text>
-      <Text style={styles.sText}>Its Rainy</Text>
-      <Text style={styles.wText}>  38°</Text>
-      <Text style={styles.subText}>Enter any Location to check weather Forecast</Text> */}
-
-
-      <TouchableOpacity onPress={onNewSbWalletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}> Get new Standby Account</Text>
+        <Text style={styles.HelloText}>Nfts Standby WALLET</Text>
+      <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>Mint NFTs</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={onNewOpWalletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}> Get new Operational Account</Text>
+      <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}> Burn Nft Tokens</Text>
       </TouchableOpacity>
 
-
-      <TouchableOpacity onPress={onSendxrpPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Standby Account send xrp</Text>
+      <TouchableOpacity onPress={onTransferNftPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>Transfer Nft</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={onOperationalAccountPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Operational Account send xrp</Text>
-      </TouchableOpacity>
-
-
-      <TouchableOpacity onPress={onCreateTlSwPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Create Trustline Standby Account</Text>
-      </TouchableOpacity>
-
-
-      <TouchableOpacity onPress={onCreateTlOwPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Create Trustline Operational Account</Text>
-      </TouchableOpacity>
-
-      
-    
     </View>
   )
 }

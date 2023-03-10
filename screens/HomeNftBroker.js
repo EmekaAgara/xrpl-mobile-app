@@ -35,7 +35,7 @@ const HomeNftBroker = () => {
 
   return (
     <View style={styles.container} behavior="padding">
-        <Text style={styles.HelloText}>Enter your Location</Text>
+        <Text style={styles.HelloText}>nft broker home</Text>
         <SearchInput/>
         {/* <Image style={styles.weatherImg}
             source={getImageForWeather('Heavy Cloud')}

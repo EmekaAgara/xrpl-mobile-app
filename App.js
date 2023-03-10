@@ -14,6 +14,16 @@ import CreateTrustlineSw from './screens/CreateTrustlineSw';
 import CreateTrustlineOp from './screens/CreateTrustlineOp';
 import NewSbWallet from './screens/NewSbWallet';
 import NewOpWallet from './screens/NewOpWallet';
+import WalletType from './screens/WalletType';
+import HomeStandbyWallet from './screens/HomeStandbyWallet';
+import HomeOperationalWallet from './screens/HomeOperationalWallet';
+import HomeNftBroker from './screens/HomeNftBroker';
+import Nfts from './screens/Nfts';
+import SwMintNft from './screens/SWMintNft';
+import OwMintNft from './screens/OwMintNft';
+import NftsOw from './screens/NftsOw';
+import TransferNftSw from './screens/TransferNftSw';
+import TransferNftOw from './screens/TransferNftOw';
 
 
 export default function App() {
@@ -34,6 +44,62 @@ export default function App() {
           />
 
           <Stack.Screen
+            name='WalletType'
+            component={WalletType}
+            options={{
+              headerShown:false,
+              }}
+          />
+
+          <Stack.Screen
+            name='HomeStandbyWallet'
+            component={HomeStandbyWallet}
+            options={{
+              headerShown:false,
+              }}
+          />
+
+          <Stack.Screen
+            name='Nfts'
+            component={Nfts}
+            options={{
+              headerShown:false,
+              }}
+          />
+
+          <Stack.Screen
+            name='SWMintNft'
+            component={SwMintNft}
+            options={{
+            headerShown:true,
+            title: 'Mint NFTS',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
+            name='HomeOperationalWallet'
+            component={HomeOperationalWallet}
+            options={{
+              headerShown:false,
+              }}
+          />
+
+          <Stack.Screen
+            name='HomeNftBroker'
+            component={HomeNftBroker}
+            options={{
+              headerShown:false,
+              }}
+          />
+
+
+
+
+          <Stack.Screen
             name='Home'
             component={Home}
             options={{
@@ -47,6 +113,33 @@ export default function App() {
             options={{
             headerShown:true,
             title: 'Create Standby Wallet',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
+            name='TransferNftSw'
+            component={TransferNftSw}
+            options={{
+            headerShown:true,
+            title: 'Transfer NFT',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+
+          <Stack.Screen
+            name='TransferNftOw'
+            component={TransferNftOw}
+            options={{
+            headerShown:true,
+            title: 'Transfer NFT',
             headerStyle: {
               backgroundColor: 'black'
             },
@@ -86,7 +179,28 @@ export default function App() {
             component={OperationalAccount}
             options={{
             headerShown:true,
-            title: 'Operational Account',
+            title: 'Send XRP',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
+            name='NftsOw'
+            component={NftsOw}
+            options={{
+              headerShown:false,
+              }}
+          />
+
+          <Stack.Screen
+            name='OwMintNft'
+            component={OwMintNft}
+            options={{
+            headerShown:true,
+            title: 'Mint NFTS',
             headerStyle: {
               backgroundColor: 'black'
             },
@@ -99,7 +213,7 @@ export default function App() {
             component={CreateTrustlineSw}
             options={{
             headerShown:true,
-            title: 'Create Trustline Sw',
+            title: 'Create Trustline',
             headerStyle: {
               backgroundColor: 'black'
             },
@@ -112,7 +226,7 @@ export default function App() {
             component={CreateTrustlineOp}
             options={{
             headerShown:true,
-            title: 'Create Trustline Op',
+            title: 'Create Trustline',
             headerStyle: {
               backgroundColor: 'black'
             },
