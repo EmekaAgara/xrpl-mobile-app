@@ -8,6 +8,11 @@ const Home = () => {
     const location = 'Lagos';
 
     const navigation = useNavigation();
+
+    const onNewSbWalletPress = () => {
+      navigation.navigate('NewSbWallet');
+    };
+
     const onSendxrpPress = () => {
       navigation.navigate('Sendxrp');
     };
@@ -37,6 +42,11 @@ const Home = () => {
       <Text style={styles.sText}>Its Rainy</Text>
       <Text style={styles.wText}>  38°</Text>
       <Text style={styles.subText}>Enter any Location to check weather Forecast</Text>
+
+
+      <TouchableOpacity onPress={onNewSbWalletPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}> Get new Standby Account</Text>
+      </TouchableOpacity>
 
       <TouchableOpacity onPress={onSendxrpPress} style={styles.ButtonContainer}>
         <Text style={styles.ButtonText}>Standby Account</Text>

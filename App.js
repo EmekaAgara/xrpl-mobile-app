@@ -12,6 +12,7 @@ import Sendxrp from './screens/Sendxrp';
 import OperationalAccount from './screens/OperationalAccount';
 import CreateTrustlineSw from './screens/CreateTrustlineSw';
 import CreateTrustlineOp from './screens/CreateTrustlineOp';
+import NewSbWallet from './screens/NewSbWallet';
 
 
 export default function App() {
@@ -40,11 +41,24 @@ export default function App() {
           />
 
           <Stack.Screen
+            name='NewSbWallet'
+            component={NewSbWallet}
+            options={{
+            headerShown:true,
+            title: 'Create Standby Wallet',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
             name='Sendxrp'
             component={Sendxrp}
             options={{
             headerShown:true,
-            title: 'Standby Account',
+            title: 'Send XRP',
             headerStyle: {
               backgroundColor: 'black'
             },
