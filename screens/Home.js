@@ -13,6 +13,10 @@ const Home = () => {
       navigation.navigate('NewSbWallet');
     };
 
+    const onNewOpWalletPress = () => {
+      navigation.navigate('NewOpWallet');
+    };
+
     const onSendxrpPress = () => {
       navigation.navigate('Sendxrp');
     };
@@ -48,12 +52,17 @@ const Home = () => {
         <Text style={styles.ButtonText}> Get new Standby Account</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity onPress={onNewOpWalletPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}> Get new Operational Account</Text>
+      </TouchableOpacity>
+
+
       <TouchableOpacity onPress={onSendxrpPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Standby Account</Text>
+        <Text style={styles.ButtonText}>Standby Account send xrp</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={onOperationalAccountPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Operational Account</Text>
+        <Text style={styles.ButtonText}>Operational Account send xrp</Text>
       </TouchableOpacity>
 
 

@@ -13,6 +13,7 @@ import OperationalAccount from './screens/OperationalAccount';
 import CreateTrustlineSw from './screens/CreateTrustlineSw';
 import CreateTrustlineOp from './screens/CreateTrustlineOp';
 import NewSbWallet from './screens/NewSbWallet';
+import NewOpWallet from './screens/NewOpWallet';
 
 
 export default function App() {
@@ -46,6 +47,20 @@ export default function App() {
             options={{
             headerShown:true,
             title: 'Create Standby Wallet',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+
+          <Stack.Screen
+            name='NewOpWallet'
+            component={NewOpWallet}
+            options={{
+            headerShown:true,
+            title: 'Create Operational Wallet',
             headerStyle: {
               backgroundColor: 'black'
             },
