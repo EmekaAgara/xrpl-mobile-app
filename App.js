@@ -29,6 +29,8 @@ import SplashScreen1 from './screens/SplashScreen1';
 import SplashScreen2 from './screens/SplashScreen2';
 import SplashScreen3 from './screens/SplashScreen3';
 import SplashScreen4 from './screens/SplashScreen4';
+import MyOpWallet from './screens/MyOpWallet';
+import MySbWallet from './screens/MySbWallet';
 
 
 export default function App() {
@@ -118,6 +120,32 @@ export default function App() {
             options={{
             headerShown:true,
             title: 'Mint NFTS',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
+            name='MyOpWallet'
+            component={MyOpWallet}
+            options={{
+            headerShown:true,
+            title: 'My Wallet',
+            headerStyle: {
+              backgroundColor: 'black'
+            },
+            headerTintColor: 'white',
+            }}
+          />
+
+          <Stack.Screen
+            name='MySbWallet'
+            component={MySbWallet}
+            options={{
+            headerShown:true,
+            title: 'My Wallet',
             headerStyle: {
               backgroundColor: 'black'
             },

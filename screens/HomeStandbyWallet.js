@@ -24,6 +24,10 @@ const HomeStandbyWallet = () => {
       navigation.navigate('Nfts');
     };
 
+    const onWaletPress = () => {
+      navigation.navigate('MySbWallet');
+    };
+
   return (
     <View style={styles.container} behavior="padding">
         <Text style={styles.HelloText}>standby Account home</Text>
@@ -45,6 +49,10 @@ const HomeStandbyWallet = () => {
 
       <TouchableOpacity onPress={onNftsPress} style={styles.ButtonContainer}>
         <Text style={styles.ButtonText}>Explore NFTS</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={onWaletPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>My Wallet</Text>
       </TouchableOpacity>
 
       

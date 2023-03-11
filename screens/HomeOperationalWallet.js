@@ -24,6 +24,10 @@ const HomeOperationalWallet = () => {
       navigation.navigate('NftsOw');
     };
 
+    const onWalletPress = () => {
+      navigation.navigate('MyOpWallet');
+    };
+
   return (
     <View style={styles.container} behavior="padding">
         <Text style={styles.HelloText}>OperationalAccount home</Text>
@@ -42,6 +46,10 @@ const HomeOperationalWallet = () => {
 
       <TouchableOpacity onPress={onNftsPress} style={styles.ButtonContainer}>
         <Text style={styles.ButtonText}>Explore NFTS</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={onWalletPress} style={styles.ButtonContainer}>
+        <Text style={styles.ButtonText}>My Wallet</Text>
       </TouchableOpacity>
 
 
