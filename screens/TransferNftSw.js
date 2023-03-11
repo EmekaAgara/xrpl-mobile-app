@@ -15,7 +15,7 @@ export default class TransferNftSw extends PureComponent {
         <WebView 
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          source={{ uri: 'https://xrpl-project.netlify.app/new-standby-wallet' }}
+          source={{ uri: 'https://xrpl-project.netlify.app/transfer-nfts' }}
           javaScriptEnabled={true}
           domStorageEnabled={true}
         />

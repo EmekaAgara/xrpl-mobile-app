@@ -15,7 +15,7 @@ export default class OwMintNft extends PureComponent {
         <WebView 
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
-          source={{ uri: 'https://xrpl-project.netlify.app/new-operational-wallet' }}
+          source={{ uri: 'https://xrpl-project.netlify.app/mint-nfts-ow' }}
           javaScriptEnabled={true}
           domStorageEnabled={true}
         />
