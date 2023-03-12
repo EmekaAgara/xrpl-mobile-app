@@ -21,11 +21,11 @@ const SplashScreen = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/XRP1.png')}
+            source={require('../assets/wallet.png')}
         />
 
-      <Text style={styles.mainText}>SplashScreen</Text>
-      <Text style={styles.subText}>Select your current location and get the weather forcast in seconds</Text>
+      <Text style={styles.mainText}>Create an account</Text>
+      <Text style={styles.subText}>Create standby and operational accounts funded with 1000 test XRP</Text>
         <TouchableOpacity onPress={onNextPress} style={styles.SecButtonContainer}>
             <Text style={styles.ButtonText}>Next</Text>
         </TouchableOpacity>

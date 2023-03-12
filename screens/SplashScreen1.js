@@ -19,11 +19,11 @@ const SplashScreen1 = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/weather.gif')}
+            source={require('../assets/XRP.png')}
         />
 
-      <Text style={styles.mainText}>SplashScreen1</Text>
-      <Text style={styles.subText}>Select your current location and get the weather forcast in seconds</Text>
+      <Text style={styles.mainText}>Transfer XRP</Text>
+      <Text style={styles.subText}>Transfer XRP from the standby account to the operational account and vice versa</Text>
         <TouchableOpacity onPress={onNextPress} style={styles.SecButtonContainer}>
             <Text style={styles.ButtonText}>Next</Text>
         </TouchableOpacity>

@@ -19,11 +19,11 @@ const SplashScreen2 = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/weather.gif')}
+            source={require('../assets/Image2.png')}
         />
 
-      <Text style={styles.mainText}>SplashScreen2</Text>
-      <Text style={styles.subText}>Select your current location and get the weather forcast in seconds</Text>
+      <Text style={styles.mainText}>Create Trustlines</Text>
+      <Text style={styles.subText}>Create a trust line between accounts and Send issued currency between accounts</Text>
         <TouchableOpacity onPress={onNextPress} style={styles.SecButtonContainer}>
             <Text style={styles.ButtonText}>Next</Text>
         </TouchableOpacity>

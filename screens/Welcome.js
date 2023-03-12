@@ -13,7 +13,7 @@ const Welcome = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/weather.gif')}
+            source={require('../assets/XRP.png')}
         />
 
       <Text style={styles.mainText}>Check the weather in your Location</Text>

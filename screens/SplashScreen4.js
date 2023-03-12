@@ -15,13 +15,13 @@ const SplashScreen4 = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/weather.gif')}
+            source={require('../assets/getstarted.png')}
         />
 
-      <Text style={styles.mainText}>SplashScreen4</Text>
-      <Text style={styles.subText}>Select your current location and get the weather forcast in seconds</Text>
+      <Text style={styles.mainText}>Get Started</Text>
+      <Text style={styles.subText}>Get started now by selecting a wallet type on your device</Text>
 
-        <TouchableOpacity onPress={onGetStartedPress} style={styles.ButtonContainer}>
+        <TouchableOpacity onPress={onGetStartedPress} style={styles.SecButtonContainer}>
             <Text style={styles.ButtonText}>Get Started</Text>
         </TouchableOpacity>
     

@@ -2,7 +2,6 @@ import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView,TouchableO
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import SearchInput from '../components/SearchInput';
-import getImageForWeather from '../utils/getImageForWeather';
 
 const WalletType = () => {
     const location = 'Lagos';

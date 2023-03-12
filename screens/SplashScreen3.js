@@ -19,11 +19,11 @@ const SplashScreen3 = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/weather.gif')}
+            source={require('../assets/30.png')}
         />
 
-      <Text style={styles.mainText}>SplashScreen3</Text>
-      <Text style={styles.subText}>Select your current location and get the weather forcast in seconds</Text>
+      <Text style={styles.mainText}>Mint NFTokens</Text>
+      <Text style={styles.subText}>Mint,burn and transfer new Non-fungible Tokens (NFTokens)</Text>
         <TouchableOpacity onPress={onNextPress} style={styles.SecButtonContainer}>
             <Text style={styles.ButtonText}>Next</Text>
         </TouchableOpacity>
