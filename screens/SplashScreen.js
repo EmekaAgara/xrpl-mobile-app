@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View,Image,TouchableOpacity, ImageBackground } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 
@@ -16,10 +16,12 @@ const SplashScreen = () => {
 
 
   return (
+
+    
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/weather.gif')}
+            source={require('../assets/XRP1.png')}
         />
 
       <Text style={styles.mainText}>SplashScreen</Text>
@@ -55,6 +57,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:50,
         paddingBottom:20,
     },
+
 
     subText:{
         color:'white',
@@ -109,7 +112,7 @@ const styles = StyleSheet.create({
     },
 
     weatherAnimation:{
-        width:350,
+        width:300,
         resizeMode:'contain',
     }
 
