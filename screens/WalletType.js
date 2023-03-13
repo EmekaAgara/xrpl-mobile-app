@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import SearchInput from '../components/SearchInput';
 import { FlatList } from 'react-native';
 
 const data = [
