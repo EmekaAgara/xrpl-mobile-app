@@ -1,12 +1,37 @@
 import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import SearchInput from '../components/SearchInput';
+import { FlatList } from 'react-native';
+
+const data = [
+  {
+    id:"1",
+    image:"../assets/30.png",
+    title:"Mint NFTS",
+    description:"Mint NFTokens to your standby wallet address",
+    screen:"SWMintNft"
+  },
+
+  {
+    id:"2",
+    image:"../assets/30.png",
+    title:"Burn NFTokens",
+    description:"Burn NFTokens in your standby wallet address",
+    screen:"SWMintNft"
+  },
+
+  {
+    id:"3",
+    image:"../assets/30.png",
+    title:"Transfer NFT",
+    description:"Get and Transfer NFTokens between accounts",
+    screen:"TransferNftSw"
+  },
+]
+
 
 
 const Nfts = () => {
-    const location = 'Lagos';
-
     const navigation = useNavigation();
 
     const onSWMintNftPress = () => {
@@ -18,128 +43,115 @@ const Nfts = () => {
     };
 
   return (
+
     <View style={styles.container} behavior="padding">
-        <Text style={styles.HelloText}>Nfts Standby WALLET</Text>
-      <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Mint NFTs</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}> Burn Nft Tokens</Text>
-      </TouchableOpacity>
+    <Text style={styles.HelloText}>Explore NFTS</Text>
 
-      <TouchableOpacity onPress={onTransferNftPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Transfer Nft</Text>
-      </TouchableOpacity>
+      <FlatList
+      data={data}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+
+        <TouchableOpacity onPress={() => navigation.navigate(item.screen)} style={styles.ButtonContainer}>
+            <Image
+           source={require('../assets/30.png')}
+           style={styles.cardImage}
+         />
+         <Text style={styles.mainText}>{item.title}</Text>
+      <Text style={styles.descText}>{item.description}</Text>
+     </TouchableOpacity>
+      )}
+
+    />
 
     </View>
+
+
+    // <View style={styles.container} behavior="padding">
+    //     <Text style={styles.HelloText}>Nfts Standby WALLET</Text>
+    //   <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
+    //     <Text style={styles.ButtonText}>Mint NFTs</Text>
+    //   </TouchableOpacity>
+
+    //   <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
+    //     <Text style={styles.ButtonText}> Burn Nft Tokens</Text>
+    //   </TouchableOpacity>
+
+    //   <TouchableOpacity onPress={onTransferNftPress} style={styles.ButtonContainer}>
+    //     <Text style={styles.ButtonText}>Transfer Nft</Text>
+    //   </TouchableOpacity>
+
+    // </View>
   )
 }
 
 export default Nfts
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#000',
-      justifyContent: 'center',
-      paddingBottom:30
-    },
-
-    HelloText:{
-        color:'white',
-        fontSize:25,
-        fontWeight:700,
-        textAlign:'left',
-        paddingHorizontal:20,
-    },
-
-    mainText:{
-        color:'white',
-        fontSize:30,
-        fontWeight:700,
-        textAlign:'center',
-        paddingHorizontal:50,
-        paddingBottom:10,
-    },
-
-    wText:{
-        color:'white',
-        fontSize:90,
-        fontWeight:600,
-        textAlign:'center',
-        paddingHorizontal:50,
-        marginVertical:15
-    },
-
-    dText:{
-        color:'white',
-        fontSize:15,
-        fontWeight:600,
-        textAlign:'center', 
-        paddingHorizontal:50,
-        color:'#818589',
-        lineHeight:20,
-    },
-
-    sText:{
-        color:'white',
-        fontSize:20,
-        fontWeight:600,
-        textAlign:'center', 
-        paddingHorizontal:50,
-        color:'#ffffff',
-        lineHeight:20,
-        paddingTop:10
-    },
-
-    subText:{
-        color:'white',
-        fontSize:15,
-        fontWeight:500,
-        textAlign:'center', 
-        paddingHorizontal:50,
-        color:'#818589',
-        lineHeight:20,
-    },
-
-    weatherImg:{
-        width: '70%',
-        maxWidth: 300,
-        maxHeight: 250,
-        alignContent:'center',
-        alignSelf:'center',
-        marginVertical:30
-    },
-
-    textInput: {
-        backgroundColor: '#212125',
-        height: 55,
-        width: '90%',
-        marginTop: 20,
-        marginHorizontal: 20,
-        paddingHorizontal: 25,
-        alignSelf: 'flex-start',
-        borderRadius:7,
-        color:'#818589'
-    },
-
-    ButtonContainer: {
-      backgroundColor: "#5659C6",
-      borderRadius: 5,
-      paddingVertical: 20,
-      paddingHorizontal: 140,
-      marginBottom:10,
-      
+     container: {
+    flex: 1,
+    backgroundColor: '#000',
+    justifyContent: 'center',
+    paddingBottom:30,
+    paddingTop:120,
+    padding:6
   },
 
 
-  ButtonText: {
-      fontSize: 15,
-      color: "#fff",
-      fontWeight: 500,
-      alignSelf: "center",
+  HelloText:{
+    color:'white',
+    fontSize:25,
+    fontWeight:700,
+    textAlign:'left',
+    paddingBottom:20
+},
+
+  cardImage: {
+    padding: 55,
+    margin:20,
+    paddingBottom:30,
+    height: 35,
+    width: 35,
+    resizeMode: 'contain',
+    alignSelf: 'flex-start',
+    position: 'absolute',
   },
+
+  mainText:{
+    color:'white',
+    fontSize:16,
+    fontWeight:700,
+    textAlign:'left',
+    paddingBottom:5,
+    paddingLeft:90,
+  },
+
+  descText:{
+    color:'#898A8B',
+    fontSize:14,
+    fontWeight:300,
+    textAlign:'left',
+    paddingLeft:90,
+},
+
+  ButtonContainer: {
+    backgroundColor: "#141518",
+    borderRadius: 5,
+    paddingVertical: 30,
+    paddingHorizontal: 40,
+    marginBottom:10,
+    
+},
+
+CardContainer: {
+  backgroundColor: "#5659C6",
+  borderRadius: 5,
+  paddingVertical: 20,
+  paddingHorizontal: 140,
+  marginBottom:10,
+  height:100,  
+},
 
   });
   
