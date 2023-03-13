@@ -2,6 +2,32 @@ import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView,TouchableO
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import SearchInput from '../components/SearchInput';
+import { FlatList } from 'react-native';
+
+const data = [
+  {
+    id:"1",
+    image:"../assets/30.png",
+    title:"Standby Wallet",
+    description:"Standby wallet addresses, which are operated by actual humans, can send tokens to operational addresses."
+  },
+
+  {
+    id:"2",
+    image:"../assets/30.png",
+    title:"Operational Wallet",
+    description:"Operational addresses, which are operated by automated systems, send payments to other counterparties, such as liquidity providers, partners, and other customer."
+  },
+
+  {
+    id:"3",
+    image:"../assets/30.png",
+    title:"NFT Broker Wallet",
+    description:"NFT Broker wallet batch mint NFTokens and broker NFToken transactions."
+  }
+]
+
+
 
 const WalletType = () => {
     const location = 'Lagos';
@@ -21,23 +47,65 @@ const WalletType = () => {
     };
 
   return (
+
     <View style={styles.container} behavior="padding">
-        <Text style={styles.HelloText}>select wallet type</Text>
 
-      <TouchableOpacity onPress={onStandbyWalletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Standby Account</Text>
+    <Text style={styles.HelloText}>Select wallet type</Text>
+
+      <FlatList
+      data={data}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+
+        <TouchableOpacity
+        style={styles.buttonFacebookStyle}>
+        <Image
+          source={require('../assets/30.png')}
+          style={styles.buttonImageIconStyle}
+        />
+        <Text style={styles.buttonTextStyle}>{item.title}</Text>
+        <Text style={styles.buttonTextStyle}>{item.description}</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={onOperationalWalletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Operational Account</Text>
-      </TouchableOpacity>
 
 
-      <TouchableOpacity onPress={onNftBrokerPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>nft broker</Text>
-      </TouchableOpacity>
+        // <TouchableOpacity style={styles.CardContainer}>
+        //   <View>
+        //     <Image
+        //     source={require('../assets/30.png')}
+        //     style={{ width:200, resizeMode:"contain"}}
+        //     />
+        //     <Text>{item.title}</Text>
+        //     <Text>{item.description}</Text>
+        //   </View>
+        // </TouchableOpacity>
+
+      )}
+
+    />
 
     </View>
+
+
+
+
+    // <View style={styles.container} behavior="padding">
+    //     <Text style={styles.HelloText}>select wallet type</Text>
+
+    //   <TouchableOpacity onPress={onStandbyWalletPress} style={styles.ButtonContainer}>
+    //     <Text style={styles.ButtonText}>Standby Account</Text>
+    //   </TouchableOpacity>
+
+    //   <TouchableOpacity onPress={onOperationalWalletPress} style={styles.ButtonContainer}>
+    //     <Text style={styles.ButtonText}>Operational Account</Text>
+    //   </TouchableOpacity>
+
+
+    //   <TouchableOpacity onPress={onNftBrokerPress} style={styles.ButtonContainer}>
+    //     <Text style={styles.ButtonText}>nft broker</Text>
+    //   </TouchableOpacity>
+
+    // </View>
   )
 }
 
@@ -48,7 +116,42 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#000',
       justifyContent: 'center',
-      paddingBottom:30
+      paddingBottom:30,
+      paddingTop:120
+    },
+
+
+    buttonGPlusStyle: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#dc4e41',
+      borderWidth: 0.5,
+      borderColor: '#fff',
+      height: 40,
+      borderRadius: 5,
+      margin: 5,
+    },
+    buttonFacebookStyle: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#485a96',
+      borderWidth: 0.5,
+      borderColor: '#fff',
+      height: 40,
+      borderRadius: 5,
+      margin: 5,
+    },
+    buttonImageIconStyle: {
+      padding: 10,
+      margin: 5,
+      height: 25,
+      width: 25,
+      resizeMode: 'stretch',
+    },
+    buttonTextStyle: {
+      color: '#fff',
+      marginBottom: 4,
+      marginLeft: 10,
     },
 
     HelloText:{
@@ -56,7 +159,8 @@ const styles = StyleSheet.create({
         fontSize:25,
         fontWeight:700,
         textAlign:'left',
-        paddingHorizontal:20,
+        paddingBottom:20,
+        // paddingHorizontal:20,
     },
 
     mainText:{
@@ -137,6 +241,18 @@ const styles = StyleSheet.create({
       marginBottom:10,
       
   },
+
+  CardContainer: {
+    // flex:1,
+    backgroundColor: "#5659C6",
+    borderRadius: 5,
+    paddingVertical: 20,
+    paddingHorizontal: 140,
+    marginBottom:10,
+    height:100,
+    // maxHeight:100,
+    
+},
 
 
   ButtonText: {
