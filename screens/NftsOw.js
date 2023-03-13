@@ -8,7 +8,7 @@ const data = [
     id:"1",
     image:"../assets/30.png",
     title:"Mint NFTS",
-    description:"Mint NFTokens to your standby wallet address",
+    description:"Mint NFTokens to your operational wallet address",
     screen:"OwMintNft"
   },
 
@@ -16,7 +16,7 @@ const data = [
     id:"2",
     image:"../assets/30.png",
     title:"Burn NFTokens",
-    description:"Burn NFTokens in your standby wallet address",
+    description:"Burn NFTokens in your operational wallet address",
     screen:"OwMintNft"
   },
 
