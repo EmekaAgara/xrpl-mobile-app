@@ -3,6 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { FlatList } from 'react-native';
 
+
 const data = [
   {
     id:"1",
@@ -66,30 +67,14 @@ const Nfts = () => {
     />
 
     </View>
-
-
-    // <View style={styles.container} behavior="padding">
-    //     <Text style={styles.HelloText}>Nfts Standby WALLET</Text>
-    //   <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
-    //     <Text style={styles.ButtonText}>Mint NFTs</Text>
-    //   </TouchableOpacity>
-
-    //   <TouchableOpacity onPress={onSWMintNftPress} style={styles.ButtonContainer}>
-    //     <Text style={styles.ButtonText}> Burn Nft Tokens</Text>
-    //   </TouchableOpacity>
-
-    //   <TouchableOpacity onPress={onTransferNftPress} style={styles.ButtonContainer}>
-    //     <Text style={styles.ButtonText}>Transfer Nft</Text>
-    //   </TouchableOpacity>
-
-    // </View>
   )
 }
 
 export default Nfts
 
 const styles = StyleSheet.create({
-     container: {
+  
+  container: {
     flex: 1,
     backgroundColor: '#000',
     justifyContent: 'center',
