@@ -1,7 +1,49 @@
 import { StyleSheet, Text, View,Image,TextInput, KeyboardAvoidingView,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
-import SearchInput from '../components/SearchInput';
+import { FlatList } from 'react-native';
+
+const data = [
+  {
+    id:"1",
+    image:"../assets/30.png",
+    title:"Create Wallet",
+    description:"Create a new standby wallet address with 1000 test tokens",
+    screen:"NewSbWallet"
+  },
+
+  {
+    id:"2",
+    image:"../assets/30.png",
+    title:"Send XRP",
+    description:"Send XRP tokens to Operational wallet addresses",
+    screen:"Sendxrp"
+  },
+
+  {
+    id:"3",
+    image:"../assets/30.png",
+    title:"Create Trustline",
+    description:"Create trustlines and send issued currency between accounts",
+    screen:"CreateTrustlineSw"
+  },
+
+  {
+    id:"4",
+    image:"../assets/30.png",
+    title:"Explore NFTs",
+    description:"Mint, burn, and transfer NFTokens between accounts",
+    screen:"Nfts"
+  },
+
+  {
+    id:"5",
+    image:"../assets/30.png",
+    title:"My Wallet",
+    description:"Get and check your wallet account details",
+    screen:"MySbWallet"
+  }
+]
 
 const HomeStandbyWallet = () => {
 
@@ -28,34 +70,29 @@ const HomeStandbyWallet = () => {
     };
 
   return (
+
+
     <View style={styles.container} behavior="padding">
-        <Text style={styles.HelloText}>standby Account home</Text>
 
+    <Text style={styles.HelloText}>Standby Wallet Account</Text>
 
-      <TouchableOpacity onPress={onNewSbWalletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}> Get new Wallet Account</Text>
-      </TouchableOpacity>
+      <FlatList
+      data={data}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
 
+        <TouchableOpacity onPress={() => navigation.navigate(item.screen)} style={styles.ButtonContainer}>
+            <Image
+           source={require('../assets/30.png')}
+           style={styles.cardImage}
+         />
+         <Text style={styles.mainText}>{item.title}</Text>
+      <Text style={styles.descText}>{item.description}</Text>
+     </TouchableOpacity>
+      )}
 
-      <TouchableOpacity onPress={onSendxrpPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Send xrp</Text>
-      </TouchableOpacity>
+    />
 
-      <TouchableOpacity onPress={onCreateTlSwPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Create Trustline</Text>
-      </TouchableOpacity>
-
-
-      <TouchableOpacity onPress={onNftsPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>Explore NFTS</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={onWaletPress} style={styles.ButtonContainer}>
-        <Text style={styles.ButtonText}>My Wallet</Text>
-      </TouchableOpacity>
-
-      
-    
     </View>
   )
 }
@@ -63,107 +100,69 @@ const HomeStandbyWallet = () => {
 export default HomeStandbyWallet
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#000',
-      justifyContent: 'center',
-      paddingBottom:30
-    },
-
-    HelloText:{
-        color:'white',
-        fontSize:25,
-        fontWeight:700,
-        textAlign:'left',
-        paddingHorizontal:20,
-    },
-
-    mainText:{
-        color:'white',
-        fontSize:30,
-        fontWeight:700,
-        textAlign:'center',
-        paddingHorizontal:50,
-        paddingBottom:10,
-    },
-
-    wText:{
-        color:'white',
-        fontSize:90,
-        fontWeight:600,
-        textAlign:'center',
-        paddingHorizontal:50,
-        marginVertical:15
-    },
-
-    dText:{
-        color:'white',
-        fontSize:15,
-        fontWeight:600,
-        textAlign:'center', 
-        paddingHorizontal:50,
-        color:'#818589',
-        lineHeight:20,
-    },
-
-    sText:{
-        color:'white',
-        fontSize:20,
-        fontWeight:600,
-        textAlign:'center', 
-        paddingHorizontal:50,
-        color:'#ffffff',
-        lineHeight:20,
-        paddingTop:10
-    },
-
-    subText:{
-        color:'white',
-        fontSize:15,
-        fontWeight:500,
-        textAlign:'center', 
-        paddingHorizontal:50,
-        color:'#818589',
-        lineHeight:20,
-    },
-
-    weatherImg:{
-        width: '70%',
-        maxWidth: 300,
-        maxHeight: 250,
-        alignContent:'center',
-        alignSelf:'center',
-        marginVertical:30
-    },
-
-    textInput: {
-        backgroundColor: '#212125',
-        height: 55,
-        width: '90%',
-        marginTop: 20,
-        marginHorizontal: 20,
-        paddingHorizontal: 25,
-        alignSelf: 'flex-start',
-        borderRadius:7,
-        color:'#818589'
-    },
-
-    ButtonContainer: {
-      backgroundColor: "#5659C6",
-      borderRadius: 5,
-      paddingVertical: 20,
-      paddingHorizontal: 140,
-      marginBottom:10,
-      
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+    justifyContent: 'center',
+    paddingBottom:30,
+    paddingTop:120,
+    padding:6
   },
 
 
-  ButtonText: {
-      fontSize: 15,
-      color: "#fff",
-      fontWeight: 500,
-      alignSelf: "center",
+  HelloText:{
+    color:'white',
+    fontSize:25,
+    fontWeight:700,
+    textAlign:'left',
+    paddingBottom:20
+},
+
+  cardImage: {
+    padding: 55,
+    margin:20,
+    paddingBottom:30,
+    height: 35,
+    width: 35,
+    resizeMode: 'contain',
+    alignSelf: 'flex-start',
+    position: 'absolute',
   },
+
+  mainText:{
+    color:'white',
+    fontSize:16,
+    fontWeight:700,
+    textAlign:'left',
+    paddingBottom:5,
+    paddingLeft:90,
+  },
+
+  descText:{
+    color:'#898A8B',
+    fontSize:14,
+    fontWeight:300,
+    textAlign:'left',
+    paddingLeft:90,
+},
+
+  ButtonContainer: {
+    backgroundColor: "#141518",
+    borderRadius: 5,
+    paddingVertical: 30,
+    paddingHorizontal: 40,
+    marginBottom:10,
+    
+},
+
+CardContainer: {
+  backgroundColor: "#5659C6",
+  borderRadius: 5,
+  paddingVertical: 20,
+  paddingHorizontal: 140,
+  marginBottom:10,
+  height:100,  
+},
 
   });
   
