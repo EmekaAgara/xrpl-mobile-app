@@ -15,7 +15,7 @@ const SplashScreen4 = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/getstarted.png')}
+            source={require('../assets/getstarted.gif')}
         />
 
       <Text style={styles.mainText}>Get Started</Text>
