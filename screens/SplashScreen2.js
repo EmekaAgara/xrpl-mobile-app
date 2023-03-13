@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#5659C6",
         borderRadius: 5,
         paddingVertical: 20,
-        paddingHorizontal: 140,
+        // paddingHorizontal: 140,
         width:'85%'
 
     },
