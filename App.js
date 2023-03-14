@@ -121,9 +121,9 @@ export default function App() {
             headerShown:true,
             title: 'Mint NFTS',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -134,9 +134,9 @@ export default function App() {
             headerShown:true,
             title: 'My Wallet',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -147,9 +147,9 @@ export default function App() {
             headerShown:true,
             title: 'My Wallet',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -187,9 +187,9 @@ export default function App() {
             headerShown:true,
             title: 'Create Standby Wallet',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -200,9 +200,9 @@ export default function App() {
             headerShown:true,
             title: 'Transfer NFT',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -214,9 +214,9 @@ export default function App() {
             headerShown:true,
             title: 'Transfer NFT',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -228,9 +228,9 @@ export default function App() {
             headerShown:true,
             title: 'Create Operational Wallet',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -241,9 +241,9 @@ export default function App() {
             headerShown:true,
             title: 'Send XRP',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -254,9 +254,9 @@ export default function App() {
             headerShown:true,
             title: 'Send XRP',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -275,9 +275,9 @@ export default function App() {
             headerShown:true,
             title: 'Mint NFTS',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -288,9 +288,9 @@ export default function App() {
             headerShown:true,
             title: 'Create Trustline',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
@@ -301,9 +301,9 @@ export default function App() {
             headerShown:true,
             title: 'Create Trustline',
             headerStyle: {
-              backgroundColor: 'black'
+              backgroundColor: '#fafafa'
             },
-            headerTintColor: 'white',
+            headerTintColor: 'black',
             }}
           />
 
