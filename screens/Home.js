@@ -4,7 +4,6 @@ import { useNavigation } from '@react-navigation/native'
 import SearchInput from '../components/SearchInput';
 
 const Home = () => {
-    const location = 'Lagos';
 
     const navigation = useNavigation();
 
@@ -36,15 +35,6 @@ const Home = () => {
     <View style={styles.container} behavior="padding">
         <Text style={styles.HelloText}>Enter your Location</Text>
         <SearchInput/>
-        {/* <Image style={styles.weatherImg}
-            source={getImageForWeather('Heavy Cloud')}
-        /> */}
-
-      {/* <Text style={styles.mainText}>In {location}</Text>
-      <Text style={styles.dText}>Today, 7th March 2023</Text>
-      <Text style={styles.sText}>Its Rainy</Text>
-      <Text style={styles.wText}>  38°</Text>
-      <Text style={styles.subText}>Enter any Location to check weather Forecast</Text> */}
 
 
       <TouchableOpacity onPress={onNewSbWalletPress} style={styles.ButtonContainer}>

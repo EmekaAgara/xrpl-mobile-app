@@ -7,7 +7,7 @@ import { FlatList } from 'react-native';
 const data = [
   {
     id:"1",
-    image:"../assets/30.png",
+    image:require('../assets/30.png'),
     title:"Mint NFTS",
     description:"Mint NFTokens to your standby wallet address",
     screen:"SWMintNft"
@@ -15,7 +15,7 @@ const data = [
 
   {
     id:"2",
-    image:"../assets/30.png",
+    image:require('../assets/burntokens.png'),
     title:"Burn NFTokens",
     description:"Burn NFTokens in your standby wallet address",
     screen:"SWMintNft"
@@ -23,7 +23,7 @@ const data = [
 
   {
     id:"3",
-    image:"../assets/30.png",
+    image:require('../assets/transfernft.png'),
     title:"Transfer NFT",
     description:"Get and Transfer NFTokens between accounts",
     screen:"TransferNftSw"
@@ -73,7 +73,7 @@ const HomeNftBroker = () => {
 
         <TouchableOpacity onPress={() => navigation.navigate(item.screen)} style={styles.ButtonContainer}>
             <Image
-           source={require('../assets/30.png')}
+           source={item.image}
            style={styles.cardImage}
          />
          <Text style={styles.mainText}>{item.title}</Text>

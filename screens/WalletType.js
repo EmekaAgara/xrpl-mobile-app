@@ -6,7 +6,7 @@ import { FlatList } from 'react-native';
 const data = [
   {
     id:"1",
-    image:"../assets/30.png",
+    image:require('../assets/standbywallet.png'),
     title:"Standby Wallet",
     description:"You can send tokens to operational wallet addresses.",
     screen:"HomeStandbyWallet"
@@ -14,7 +14,7 @@ const data = [
 
   {
     id:"2",
-    image:"../assets/30.png",
+    image:require('../assets/operationalwallet.png'),
     title:"Operational Wallet",
     description:"You can send tokens to standby wallet addresses.",
     screen:"HomeOperationalWallet"
@@ -22,7 +22,7 @@ const data = [
 
   {
     id:"3",
-    image:"../assets/30.png",
+    image:require('../assets/brokerwallet.png'),
     title:"NFT Broker Wallet",
     description:"You batch mint NFTokens and broker NFToken transactions.",
     screen:"HomeNftBroker"
@@ -59,7 +59,7 @@ const WalletType = () => {
 
         <TouchableOpacity onPress={() => navigation.navigate(item.screen)} style={styles.ButtonContainer}>
             <Image
-           source={require('../assets/30.png')}
+           source={item.image}
            style={styles.cardImage}
          />
          <Text style={styles.mainText}>{item.title}</Text>

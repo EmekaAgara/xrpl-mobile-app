@@ -6,7 +6,7 @@ import { FlatList } from 'react-native';
 const data = [
   {
     id:"1",
-    image:"../assets/30.png",
+    image:require('../assets/standbywallet.png'),
     title:"Create Wallet",
     description:"Create a new operational wallet address with 1000 test tokens",
     screen:"NewOpWallet"
@@ -14,7 +14,7 @@ const data = [
 
   {
     id:"2",
-    image:"../assets/30.png",
+    image:require('../assets/XRP.png'),
     title:"Send XRP",
     description:"Send XRP tokens to Standby wallet addresses",
     screen:"OperationalAccount"
@@ -22,7 +22,7 @@ const data = [
 
   {
     id:"3",
-    image:"../assets/30.png",
+    image:require('../assets/createtrustline.png'),
     title:"Create Trustline",
     description:"Create trustlines and send issued currency between accounts",
     screen:"CreateTrustlineOp"
@@ -30,7 +30,7 @@ const data = [
 
   {
     id:"4",
-    image:"../assets/30.png",
+    image:require('../assets/30.png'),
     title:"Explore NFTs",
     description:"Mint, burn, and transfer NFTokens between accounts",
     screen:"NftsOw"
@@ -38,7 +38,7 @@ const data = [
 
   {
     id:"5",
-    image:"../assets/30.png",
+    image:require('../assets/operationalwallet.png'),
     title:"My Wallet",
     description:"Get and check your wallet account details",
     screen:"MyOpWallet"
@@ -83,7 +83,7 @@ const HomeOperationalWallet = () => {
 
         <TouchableOpacity onPress={() => navigation.navigate(item.screen)} style={styles.ButtonContainer}>
             <Image
-           source={require('../assets/30.png')}
+           source={item.image}
            style={styles.cardImage}
          />
          <Text style={styles.mainText}>{item.title}</Text>

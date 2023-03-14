@@ -19,7 +19,7 @@ const SplashScreen2 = () => {
     
     <View style={styles.container}>
         <Image style={styles.weatherAnimation}
-            source={require('../assets/Image2.png')}
+            source={require('../assets/createtrustline1.png')}
         />
 
       <Text style={styles.mainText}>Create Trustlines</Text>
