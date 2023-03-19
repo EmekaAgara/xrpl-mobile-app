@@ -8,9 +8,9 @@ const data = [
   {
     id:"1",
     image:require('../assets/30.png'),
-    title:"Mint NFTS",
+    title:"Batch Mint NFTS",
     description:"Mint NFTokens to your standby wallet address",
-    screen:"SWMintNft"
+    screen:"BatchMintNft"
   },
 
   {

@@ -31,6 +31,7 @@ import SplashScreen3 from './screens/SplashScreen3';
 import SplashScreen4 from './screens/SplashScreen4';
 import MyOpWallet from './screens/MyOpWallet';
 import MySbWallet from './screens/MySbWallet';
+import BatchMintNft from './screens/BatchMintNft';
 
 
 export default function App() {
@@ -177,6 +178,19 @@ export default function App() {
             component={Home}
             options={{
             headerShown:false,
+            }}
+          />
+
+          <Stack.Screen
+            name='BatchMintNft'
+            component={BatchMintNft}
+            options={{
+              headerShown:true,
+              title: 'Batch Mint Nft',
+              headerStyle: {
+                backgroundColor: '#fafafa'
+              },
+              headerTintColor: 'black',
             }}
           />
 
